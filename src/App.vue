@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <hero/>
+    <AuthTokenInput/>
   </div>
 </template>
 <script>
-import hero from "./components/Hero.vue";
+import AuthTokenInput from "./components/AuthTokenInput.vue";
 
 export default {
   name: "app",
   components: {
-    hero
+    AuthTokenInput
   }
 };
 </script>
