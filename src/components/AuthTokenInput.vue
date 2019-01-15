@@ -1,6 +1,5 @@
 <template>
   <div class="AuthTokenInput--container">
-    {{this.spotifyAuthToken}}
     <input
       class="input is-primary"
       type="text"
@@ -38,6 +37,7 @@ export default {
 .AuthTokenInput--container {
   padding: 20px;
   width: 100%;
+  display: inline-block;
 }
 .input {
   min-width: 150px;

@@ -6,7 +6,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    spotifyAuthToken: "1234"
+    spotifyAuthToken: ""
   },
   mutations: {
     [SET_SPOTIFY_AUTH_TOKEN]: (state, payload) => {

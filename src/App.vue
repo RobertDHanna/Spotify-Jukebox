@@ -1,15 +1,18 @@
 <template>
   <div id="app">
     <AuthTokenInput/>
+    <SpotifyPlayer/>
   </div>
 </template>
 <script>
 import AuthTokenInput from "./components/AuthTokenInput.vue";
+import SpotifyPlayer from "./components/SpotifyPlayer.vue";
 
 export default {
   name: "app",
   components: {
-    AuthTokenInput
+    AuthTokenInput,
+    SpotifyPlayer
   }
 };
 </script>
