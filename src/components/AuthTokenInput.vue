@@ -1,5 +1,6 @@
 <template>
   <div class="AuthTokenInput--container">
+    {{this.spotifyAuthToken}}
     <input
       class="input is-primary"
       type="text"
@@ -11,7 +12,8 @@
 </template>
 
 <script>
-import { mapState, mapActions } from "vuex";
+import { mapState, mapMutations } from "vuex";
+import { SET_SPOTIFY_AUTH_TOKEN } from "../constants";
 
 export default {
   data() {
@@ -21,10 +23,10 @@ export default {
   },
   computed: { ...mapState(["spotifyAuthToken"]) },
   methods: {
-    ...mapActions(["setSpotifyAuthToken"]),
+    ...mapMutations(["setSpotifyAuthToken"]),
     handleSpotifyAuthTokenChange() {
-      this.$store.dispatch({
-        type: "setSpotifyAuthToken",
+      this.$store.commit({
+        type: SET_SPOTIFY_AUTH_TOKEN,
         authToken: this.userProvidedSpotifyAuthToken
       });
     }
