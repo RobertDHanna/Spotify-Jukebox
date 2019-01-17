@@ -1,18 +1,30 @@
 <template>
   <div id="app">
     <AuthTokenInput/>
-    <SpotifyPlayer/>
+    <div class="columns">
+      <div class="column">
+        <SpotifyPlayer/>
+      </div>
+      <div class="column">
+        <TrackSearch/>
+        <TrackQueue/>
+      </div>
+    </div>
   </div>
 </template>
 <script>
 import AuthTokenInput from "./components/AuthTokenInput.vue";
 import SpotifyPlayer from "./components/SpotifyPlayer.vue";
+import TrackQueue from "./components/TrackQueue.vue";
+import TrackSearch from "./components/TrackSearch.vue";
 
 export default {
   name: "app",
   components: {
     AuthTokenInput,
-    SpotifyPlayer
+    SpotifyPlayer,
+    TrackQueue,
+    TrackSearch
   }
 };
 </script>
@@ -23,5 +35,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background-color: hsl(171, 100%, 41%);
+  min-height: 100vh;
 }
 </style>

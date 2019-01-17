@@ -43,5 +43,7 @@ export default {
   min-width: 150px;
   width: 30%;
   float: right;
+  border-radius: 5px;
+  box-shadow: 1px 1px;
 }
 </style>
