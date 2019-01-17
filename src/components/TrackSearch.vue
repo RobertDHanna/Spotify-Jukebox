@@ -47,7 +47,7 @@ export default {
 
 <style scoped>
 .TrackSearch--container {
-  max-width: 75%;
+  max-width: 95%;
   margin: 0 auto;
   border-radius: 5px;
   box-shadow: 1px 1px;

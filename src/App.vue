@@ -2,12 +2,14 @@
   <div id="app">
     <AuthTokenInput/>
     <div class="columns">
-      <div class="column">
+      <div class="column is-one-third">
         <SpotifyPlayer/>
       </div>
-      <div class="column">
-        <TrackSearch/>
+      <div class="column is-one-third">
         <TrackQueue/>
+      </div>
+      <div class="column is-one-third">
+        <TrackSearch/>
       </div>
     </div>
   </div>
