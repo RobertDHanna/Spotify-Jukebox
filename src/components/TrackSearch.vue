@@ -2,10 +2,48 @@
   <div class="TrackSearch--container">
     <input class="input" type="text" placeholder="Search for a track">
     <div class="TrackSearch--results-container">
-      <p>Track Results Placeholder</p>
+      <TrackSearchResult
+        v-for="trackSearchResult in trackSearchResults"
+        :key="trackSearchResult.id"
+        :songName="trackSearchResult.songName"
+        :artistName="trackSearchResult.artistName"
+        :albumName="trackSearchResult.albumName"
+      />
     </div>
   </div>
 </template>
+
+<script>
+import TrackSearchResult from "./TrackSearchResult";
+export default {
+  components: { TrackSearchResult },
+  data: function() {
+    return {
+      trackSearchResults: [
+        {
+          id: 1,
+          songName: "Song Name",
+          artistName: "Post Malone",
+          albumName: "beerbongs & bentleys"
+        },
+        {
+          id: 2,
+          songName: "Song Name",
+          artistName: "Artist Name",
+          albumName: "albumName"
+        },
+        {
+          id: 3,
+          songName: "Song Name",
+          artistName: "Artist Name",
+          albumName: "albumName"
+        }
+      ]
+    };
+  }
+};
+</script>
+
 
 <style scoped>
 .TrackSearch--container {

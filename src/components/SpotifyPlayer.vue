@@ -4,7 +4,7 @@
       <div class="card-header-title is-centered">Jukebox Player</div>
     </div>
     <div class="card-content">
-      <p>
+      <p v-if="spotifyAuthToken !== ''">
         <b>Auth Token:</b>
         <i>{{this.spotifyAuthToken}}</i>
       </p>
